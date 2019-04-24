@@ -26,14 +26,6 @@ Rails.application.routes.draw do
   }
 
   devise_scope :user do
-    resource :callback, only: [],
-             path: "users",
-             controller: "users/sessions" do
-      collection do
-        get :openid_connect
-      end
-    end
-
     resource :registrations,
              only: %i[new create],
              path: "users",
@@ -49,6 +41,7 @@ Rails.application.routes.draw do
   end
 
   get "users", to: redirect("/users/sign_up")
+  get 'auth/openid_connect/callback', to: 'openid_connect#callback'
 
   get "401", to: "errors#unauthorized", as: :unauthorized
   get "403", to: "errors#forbidden", as: :forbidden

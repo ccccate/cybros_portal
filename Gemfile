@@ -37,6 +37,7 @@ gem "pry-rails"
 
 gem "config"
 
+gem 'omniauth_openid_connect'
 gem "devise"
 gem "devise_invitable"
 gem "devise-i18n"

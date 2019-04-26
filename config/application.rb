@@ -51,7 +51,7 @@ module CybrosCore
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
-    # config.time_zone = "Asia/Shanghai"
-    # config.i18n.default_locale = "zh-CN"
+    config.time_zone = "Asia/Shanghai"
+    config.i18n.default_locale = "zh-CN"
   end
 end

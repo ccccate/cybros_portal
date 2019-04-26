@@ -1,7 +1,6 @@
 seo_meta:
-  name: Cybros Core
-  description: Cybros Core
+  name: Cybros
+  description: Cybros
   keywords: []
 admin:
-  emails: []
-
+  emails: ['guochunzhong@thape.com.cn']

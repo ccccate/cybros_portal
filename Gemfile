@@ -17,6 +17,9 @@ end
 group :production do
   gem "mysql2"
 end
+gem 'tiny_tds'
+# bundle config local.activerecord-sqlserver-adapter /Users/guochunzhong/git/oss/activerecord-sqlserver-adapter/
+gem 'activerecord-sqlserver-adapter', git: 'git@github.com:rails-sqlserver/activerecord-sqlserver-adapter.git', branch: '6-0-dev'
 
 # Use Puma as the app server
 gem "puma", "~> 3.11"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_28_021944) do
+ActiveRecord::Schema.define(version: 2019_04_28_081108) do
 
   create_table "department_users", force: :cascade do |t|
     t.integer "department_id", null: false
@@ -57,6 +57,8 @@ ActiveRecord::Schema.define(version: 2019_04_28_021944) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "position_title"
+    t.string "clerk_code"
+    t.string "chinese_name"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true

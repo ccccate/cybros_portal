@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_28_081108) do
+ActiveRecord::Schema.define(version: 2019_04_29_052206) do
 
   create_table "department_users", force: :cascade do |t|
     t.integer "department_id", null: false
@@ -26,6 +26,26 @@ ActiveRecord::Schema.define(version: 2019_04_28_081108) do
     t.integer "position"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "name_card_applies", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "english_name"
+    t.string "department_name"
+    t.string "en_department_name"
+    t.string "title"
+    t.string "en_title"
+    t.string "phone_ext"
+    t.string "office_level"
+    t.string "fax_no"
+    t.string "mobile"
+    t.integer "print_out_box_number"
+    t.string "begin_task_id"
+    t.text "bpm_message"
+    t.string "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_name_card_applies_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -67,4 +87,5 @@ ActiveRecord::Schema.define(version: 2019_04_28_081108) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  add_foreign_key "name_card_applies", "users"
 end

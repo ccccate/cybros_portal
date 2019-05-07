@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     end
 
     resources :um_tasks, only: %i[index]
+    resources :tianzhen_logins, only: %i[index]
   end
 
   namespace :person do

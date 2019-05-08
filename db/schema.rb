@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_29_052206) do
+ActiveRecord::Schema.define(version: 2019_05_08_072337) do
 
   create_table "department_users", force: :cascade do |t|
     t.integer "department_id", null: false
@@ -46,6 +46,20 @@ ActiveRecord::Schema.define(version: 2019_04_29_052206) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_name_card_applies_on_user_id"
+  end
+
+  create_table "name_card_black_titles", force: :cascade do |t|
+    t.string "original_title"
+    t.string "required_title"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "name_card_white_titles", force: :cascade do |t|
+    t.string "original_title"
+    t.string "required_title"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|

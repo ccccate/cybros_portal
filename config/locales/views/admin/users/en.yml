@@ -33,6 +33,7 @@ en:
           status: "Status"
           actions:
             show: "Show"
+            login_as: "Login as"
       show:
         actions:
           lock: "Lock"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_08_072337) do
+ActiveRecord::Schema.define(version: 2019_05_13_022901) do
 
   create_table "department_users", force: :cascade do |t|
     t.integer "department_id", null: false
@@ -36,7 +36,6 @@ ActiveRecord::Schema.define(version: 2019_05_08_072337) do
     t.string "title"
     t.string "en_title"
     t.string "phone_ext"
-    t.string "office_level"
     t.string "fax_no"
     t.string "mobile"
     t.integer "print_out_box_number"

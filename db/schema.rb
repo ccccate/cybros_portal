@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_15_013415) do
+ActiveRecord::Schema.define(version: 2019_05_15_015017) do
 
   create_table "department_users", force: :cascade do |t|
     t.integer "department_id", null: false
@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(version: 2019_05_15_013415) do
     t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "company_name"
+    t.string "en_company_name"
     t.index ["user_id"], name: "index_name_card_applies_on_user_id"
   end
 

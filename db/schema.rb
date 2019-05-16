@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_15_034809) do
+ActiveRecord::Schema.define(version: 2019_05_16_084536) do
 
   create_table "department_users", force: :cascade do |t|
     t.integer "department_id", null: false
@@ -52,6 +52,8 @@ ActiveRecord::Schema.define(version: 2019_05_15_034809) do
     t.string "office_level"
     t.string "professional_title"
     t.string "en_professional_title"
+    t.string "chinese_name"
+    t.string "email"
     t.index ["user_id"], name: "index_name_card_applies_on_user_id"
   end
 

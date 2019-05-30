@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_29_040107) do
+ActiveRecord::Schema.define(version: 2019_05_30_013935) do
 
-  create_table "department_users", force: :cascade do |t|
-    t.integer "department_id", null: false
-    t.integer "user_id", null: false
+  create_table "department_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
+    t.bigint "department_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["department_id"], name: "index_department_users_on_department_id"
     t.index ["user_id"], name: "index_department_users_on_user_id"
   end
 
-  create_table "departments", force: :cascade do |t|
+  create_table "departments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.string "name", null: false
     t.integer "position"
     t.datetime "created_at", precision: 6, null: false
@@ -29,8 +29,17 @@ ActiveRecord::Schema.define(version: 2019_05_29_040107) do
     t.string "company_name"
   end
 
-  create_table "name_card_applies", force: :cascade do |t|
-    t.integer "user_id", null: false
+  create_table "it_knowledges", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
+    t.string "application"
+    t.string "category"
+    t.string "question"
+    t.text "answer"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "name_card_applies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
+    t.bigint "user_id", null: false
     t.string "english_name"
     t.string "department_name"
     t.string "en_department_name"
@@ -58,21 +67,21 @@ ActiveRecord::Schema.define(version: 2019_05_29_040107) do
     t.index ["user_id"], name: "index_name_card_applies_on_user_id"
   end
 
-  create_table "name_card_black_titles", force: :cascade do |t|
+  create_table "name_card_black_titles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.string "original_title"
     t.string "required_title"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "name_card_white_titles", force: :cascade do |t|
+  create_table "name_card_white_titles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.string "original_title"
     t.string "required_title"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -96,7 +105,7 @@ ActiveRecord::Schema.define(version: 2019_05_29_040107) do
     t.datetime "invitation_accepted_at"
     t.integer "invitation_limit"
     t.string "invited_by_type"
-    t.integer "invited_by_id"
+    t.bigint "invited_by_id"
     t.integer "invitations_count", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

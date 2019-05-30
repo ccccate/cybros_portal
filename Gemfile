@@ -12,13 +12,8 @@ gem "auto_strip_attributes"
 
 # Use postgresql as the database for Active Record
 # gem "pg", ">= 0.18", "< 2.0"
-# Use sqlite as the database for Active Record
-group :development, :test do
-  gem "sqlite3", "~> 1.4"
-end
-group :production do
-  gem "mysql2"
-end
+gem 'mysql2', git: 'https://github.com/brianmario/mysql2', branch: :master
+
 gem 'tiny_tds'
 # bundle config local.activerecord-sqlserver-adapter /Users/guochunzhong/git/oss/activerecord-sqlserver-adapter/
 gem 'activerecord-sqlserver-adapter', git: 'git@github.com:rails-sqlserver/activerecord-sqlserver-adapter.git', branch: '6-0-dev'

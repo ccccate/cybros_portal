@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_30_013935) do
+ActiveRecord::Schema.define(version: 2019_05_31_021916) do
 
   create_table "department_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.bigint "department_id", null: false
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2019_05_30_013935) do
     t.string "company_name"
   end
 
-  create_table "it_knowledges", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
+  create_table "knowledges", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.string "application"
     t.string "category"
     t.string "question"

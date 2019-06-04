@@ -60,6 +60,10 @@ gem "kaminari"
 # bundle config local.wechat /Users/guochunzhong/git/oss/wechat/
 gem 'wechat', git: 'https://github.com/Eric-Guo/wechat', branch: :master
 
+# bundle config local.jieba_rb /Users/guochunzhong/git/oss/jieba_rb/
+gem 'jieba_rb', git: 'https://github.com/Eric-Guo/jieba_rb', branch: :master
+gem 'similar_text'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

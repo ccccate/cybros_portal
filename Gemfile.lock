@@ -8,6 +8,17 @@ GIT
       tiny_tds
 
 GIT
+  remote: https://github.com/Eric-Guo/wechat
+  revision: 44c892dcd54aca99640689101d1a15a392949579
+  branch: master
+  specs:
+    wechat (0.11.2)
+      activesupport (>= 3.2, < 6)
+      http (>= 1.0.4, < 5)
+      nokogiri (>= 1.6.0)
+      thor
+
+GIT
   remote: https://github.com/brianmario/mysql2
   revision: c8c346db72b5505740065d9de79b4a52081d5a57
   branch: master
@@ -432,6 +443,7 @@ DEPENDENCIES
   web-console
   webdrivers
   webpacker (~> 4.0)
+  wechat!
 
 RUBY VERSION
    ruby 2.6.3p62

@@ -39,6 +39,7 @@ Rails.application.routes.draw do
     root to: "home#index"
 
     resources :tianzhen_logins, only: %i[index]
+    resource :subsidiary_workloading, only: %i[show]
   end
 
   namespace :person do

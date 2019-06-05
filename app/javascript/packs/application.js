@@ -27,4 +27,7 @@ require("channels")
 require("trix")
 require("@rails/actiontext")
 
+import echarts from 'echarts'
+window.echarts = echarts;
+
 import "controllers"

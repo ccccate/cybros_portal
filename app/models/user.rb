@@ -16,4 +16,8 @@ class User < ApplicationRecord
   def admin?
     email.in? Settings.admin.emails
   end
+
+  def knowledge_maintainer?
+    email == 'chenzifan@thape.com.cn' || %(忻琳 聂玲玲 冯可 季建杰 柳怡帆).include?(chinese_name)
+  end
 end
